@@ -3,6 +3,13 @@ Revision history
 
 
 
+v1.0.* (2018-12-14)
+-------------------
+
+* Perform make check on travis.
+
+
+
 v1.0.1 (2018-12-14)
 -------------------
 
