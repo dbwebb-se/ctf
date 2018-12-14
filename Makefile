@@ -10,7 +10,7 @@ SHELLCHECK ?= $(BIN)/shellcheck-latest/shellcheck
 SOURCES := $(shell find src/ -mindepth 1 -maxdepth 1 -type d)
 TARGETS := build clean clean-all test
 
-.PHONY: build check clean clean-all install test $(SOURCES)
+.PHONY: build clean clean-all install test $(SOURCES)
 
 all: build test
 	@echo ">>> Building and testing all the ctfs"
