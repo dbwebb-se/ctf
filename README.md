@@ -11,7 +11,9 @@ The repo provides a collection of ctf-exercises, aligned in the same structure t
 
 Relased as part of a University teaching material at https://dbwebb.se/kurser/capture-the-flag
 
+<!--
 The ctfs can be applied and managed using the [dbwebb command line utility](https://dbwebb.se/dbwebb-cli).
+-->
 
 
 
