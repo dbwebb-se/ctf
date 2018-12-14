@@ -19,6 +19,7 @@ Table of content
 -------------------
 
 * [Try out your first dbwebb ctf](#Try-out-your-first-dbwebb-ctf)
+* [Create a new dbwebb ctf](#Create-a-new-dbwebb-ctf)
 * [Acknowledgement](#Acknowledgement)
 * [License](#License)
 
