@@ -1,4 +1,4 @@
-dbwebb ctf - (Capture the flag with dbwebb)
+Capture the flag with dbwebb (dbwebb ctf)
 ===================
 
 [![Join the chat at https://gitter.im/dbwebb-se/ctf](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dbwebb-se/ctf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
