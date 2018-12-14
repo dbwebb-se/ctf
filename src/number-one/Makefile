@@ -20,6 +20,7 @@ build:
 
 check:
 	@echo ">>> Checking development environment"
+	$(MAKE) --version
 	$(BATS) --version
 	echo && $(SHELLCHECK) --version
 
