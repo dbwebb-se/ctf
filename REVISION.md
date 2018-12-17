@@ -3,7 +3,7 @@ Revision history
 
 
 
-v1.0.* (2018-12-17)
+v1.0.6 (2018-12-17)
 -------------------
 
 * Restructured the file structure for the ctf.
