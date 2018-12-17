@@ -16,9 +16,12 @@ cp "$root/target/$targetFile" "$targetFile"
 mv "$targetFile" file.zip
 unzip -oq file.zip
 
-tesseract flag.png out
+tesseract flag.png out >& /dev/null
 
-cat out.txt | caesar 15
+flag=$( cat out.txt | caesar 15 | grep dbwebb-CTF )
 
 # Verify the flag matches the content of flag.txt
-# diff "$root/flag.txt" "$endpoint"
+diff "$root/flag.txt" <( echo $flag )
+
+# Echo out the flag
+echo $flag
