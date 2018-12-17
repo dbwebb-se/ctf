@@ -1,0 +1,1 @@
+dbwebb-CTF{files like flag.txt can contain the flag}
