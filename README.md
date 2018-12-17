@@ -1,7 +1,7 @@
 Capture the flag with dbwebb (dbwebb ctf)
 ===================
 
-[![Latest Stable Version](https://poser.pugx.org/dbwebb/htmlphp/v/stable)](https://packagist.org/packages/dbwebb/htmlphp)
+[![Latest Stable Version](https://poser.pugx.org/dbwebb/ctf/v/stable)](https://packagist.org/packages/dbwebb/ctf)
 [![Join the chat at https://gitter.im/dbwebb-se/ctf](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dbwebb-se/ctf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Build Status](https://travis-ci.org/dbwebb-se/ctf.svg?branch=master)](https://travis-ci.org/dbwebb-se/ctf)
