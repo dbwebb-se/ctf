@@ -43,3 +43,7 @@ install:
 
 	# Shellcheck
 	curl -s https://storage.googleapis.com/shellcheck/shellcheck-latest.linux.x86_64.tar.xz | tar -xJ -C $(BIN)
+
+test:
+	@echo ">>> Testing"
+	composer validate

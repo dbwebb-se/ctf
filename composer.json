@@ -2,7 +2,7 @@
     "name": "dbwebb/ctf",
     "description": "A collection of CTF for education purpose.",
     "type": "project",
-    "license": "CC BY-NC-SA 4.0",
+    "license": "CC-BY-NC-SA-4.0",
     "authors": [
         {
             "name": "Mikael Roos",

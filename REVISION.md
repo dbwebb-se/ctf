@@ -3,6 +3,13 @@ Revision history
 
 
 
+v1.0.5 (2018-12-17)
+-------------------
+
+* Fix naming of license CC-BY-NC-SA-4.0 in composer.json.
+
+
+
 v1.0.4 (2018-12-17)
 -------------------
 
