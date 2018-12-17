@@ -2,16 +2,23 @@
 #
 # Solve the dbwebb ctf and echo out the flag.
 #
+targetFile="95b09698fda1f64af16708ffb859eab9"
+
+# Create the working directory and download the target file
+root="$( pwd )"
+workDir="$root/build/solve"
+rm -rf "$workDir"
+install -d "$workDir"
+cd "$workDir" || exit
+cp "$root/target/$targetFile" "$targetFile"
 
 # Get the flag from the target
-install -d build/solve
-cd build/solve || exit
+mv "$targetFile" file.zip
+unzip -oq file.zip
 
-cp "$( find ../../target -mindepth 1 )" file.zip
-unzip file.zip
-# convert flag.png -scale 300% output.png
 tesseract flag.png out
+
 cat out.txt | caesar 15
 
-# Verify it matches the content of flag.txt
-# diff flag.txt ../../flag.txt
+# Verify the flag matches the content of flag.txt
+# diff "$root/flag.txt" "$endpoint"
