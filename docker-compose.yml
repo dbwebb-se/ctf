@@ -1,0 +1,11 @@
+version: "3"
+services:
+    ctf:
+        image: dbwebb/courserepo:ctf
+        volumes: [ ".:/home/dbwebb/repo" ]
+    ctf-cli:
+        image: dbwebb/courserepo:ctf-cli
+        volumes: [ ".:/home/dbwebb/repo" ]
+    ctf-apache:
+        image: dbwebb/courserepo:ctf-apache
+        volumes: [ ".:/home/dbwebb/repo" ]

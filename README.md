@@ -37,9 +37,10 @@ Learn the concept by finding your first flag by solving a your first dbwebb ctf.
 The flag you are looking for looks something like this, each ctf has its own flag.
 
 > dbw3bb-CTF{some text related to the flag}
+
 > dbw3bb-CTF{50m3 73x7 r3l473d 70 7h3 fl46}
 
-You can start by solving [a sample dbwebb ctf](src/0001/doc/instruction.md).
+You can start by solving [a sample dbwebb ctf](src/0001/README.md).
 
 
 
@@ -50,7 +51,7 @@ You can contribute by adding more ctf to this repo.
 
 All ctfs are in the the directory `src/XXXX`. You can duplicate the directory ctf `src/0001` and start working from that base. 
 
-You can read about the dbwebb ctf structure in [`src/0001/README.md`](src/0001/README.md).
+You can read about the dbwebb ctf structure in [`src/README.md`](src/README.md).
 
 Ensure that your dbwebb ctf passes `make test` before you commit it.
 

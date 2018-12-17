@@ -1,12 +1,12 @@
 #!/usr/bin/env bats
 #
-# Tests for creating the ctf and verify towards target/
+# Tests for building the ctf and verify towards target/
 #
 #load test_helper
 
-@test "create and validate the ctf" {
+@test "build and validate the ctf" {
     run install -d build/bats
-    run bash script/create.bash build/bats
+    run bash script/build.bash build/bats
     (( $status == 0 ))
     [[ "$output" = $( ls build/bats ) ]]
     [[ "$output" = $( ls target ) ]]
