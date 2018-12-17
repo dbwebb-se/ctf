@@ -15,7 +15,7 @@ Use the Makefile to work with the ctf. You may install a test environment for a 
 make build
 ----------------------------
 
-Create the script `script/create.bash` which creates the ctf and puts it into the directory `target`. A dbwebb ctf should be one file that could be downloaded by the user.
+Create the script `script/build.bash` which creates the ctf and puts it into the directory `target`. A dbwebb ctf should be one file that could be downloaded by the user.
 
 The script is executed by the target `make build`.  The script should echo out the name of the target file.
 
@@ -44,7 +44,7 @@ Use a temporary directory `build/solve` when solving the ctf, thats how the user
 make test
 ----------------------------
 
-Make the cft pass tests in `make test`.
+Make the cft pass tests in `make test`. The test program will try to build and solve the ctf using the scripts in `script/{build,solve}.bash`.
 
 
 
