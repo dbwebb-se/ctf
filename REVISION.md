@@ -3,10 +3,11 @@ Revision history
 
 
 
-v1.0.* (2018-12-17)
+v1.0.3 (2018-12-17)
 -------------------
 
 * Add composer.json for package versions.
+* Add to packagist.
 
 
 
