@@ -44,11 +44,11 @@ You can start with [dbwebb ctf number one](src/instruction/README.md).
 Create a new dbwebb ctf
 -------------------
 
-You can contribute by adding ctf to this repo.
+You can contribute by adding more ctf to this repo.
 
-All ctfs are in the the directory `src/name-of-ctf`. You can duplicate the directory ctf `src/number-one` and start working from that base. 
+All ctfs are in the the directory `src/XXXX`. You can duplicate the directory ctf `src/0001` and start working from that base. 
 
-You can read on the structure in [`src/number-one/README.md`](src/number-one/README.md).
+You can read on the dbwebb ctf structure in [`src/0001/README.md`](src/0001/README.md).
 
 
 

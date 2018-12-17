@@ -54,4 +54,8 @@ solve:
 test:
 	@echo ">>> Run tests"
 	@#$(SHELLCHECK) --shell=bash src/*.bash
+ifneq ("$(wildcard $(BATS))","")
 	[ ! -d test ] || $(BATS) test/
+else
+	@echo "Missing 'bats', try running ' make install'."
+endif

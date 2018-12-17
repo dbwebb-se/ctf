@@ -3,11 +3,13 @@ Revision history
 
 
 
-v1.0.* (2018-12-14)
+v1.0.2 (2018-12-17)
 -------------------
 
 * Perform make check on travis.
 * Add make --version to make check.
+* Renamed src/number-one to src/0001.
+
 
 
 v1.0.1 (2018-12-14)
