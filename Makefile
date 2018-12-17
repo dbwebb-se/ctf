@@ -10,7 +10,7 @@ SHELLCHECK ?= $(BIN)/shellcheck-latest/shellcheck
 SOURCES := $(shell find src/ -mindepth 1 -maxdepth 1 -type d)
 TARGETS := build clean clean-all solve test
 
-.PHONY: check clean-top install test $(SOURCES)
+.PHONY: build-database check clean-top install test $(SOURCES)
 
 all: build test
 	@echo ">>> Building and testing all the ctfs"
@@ -19,6 +19,12 @@ $(TARGETS): $(SOURCES)
 
 $(SOURCES):
 	$(MAKE) -C $@ $(MAKECMDGOALS) BIN=$(PWD)/$(BIN)
+
+build: build-database
+
+build-database:
+	@echo ">>> Building ctf database"
+	bash script/build_database.bash
 
 clean-top:
 	rm -rf bin

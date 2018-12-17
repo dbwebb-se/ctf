@@ -5,7 +5,7 @@ tag:
     - basic
     - linux
 ---
-A file that contains other files§
+A file that contains other files
 ============================
 
 Try to find the file `flag.txt` and then find the real flag inside that file.

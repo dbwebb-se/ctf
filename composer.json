@@ -9,5 +9,9 @@
             "email": "mos@dbwebb.se"
         }
     ],
-    "require": {}
+    "require": { },
+    "require-dev": {
+        "anax/textfilter": "^1.2",
+        "symfony/yaml": "^4.2"
+    }
 }
