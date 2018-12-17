@@ -9,7 +9,7 @@ jobs:
       # specify the version you desire here
       #- image: circleci/node:latest
       #- image: circleci/node:latest
-      - image: dbwebb/courserepo
+      - image: dbwebb/courserepo:ctf
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
