@@ -3,6 +3,14 @@ Revision history
 
 
 
+v1.0.7 (2018-12-17)
+-------------------
+
+* Make 0004 pass unit test.
+* Add building of database in data/ctf.sqlite.
+
+
+
 v1.0.6 (2018-12-17)
 -------------------
 

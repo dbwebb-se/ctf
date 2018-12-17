@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Solve the dbwebb ctf and echo out the flag.
+# Solve the dbwebb ctf and echo out the flag, nothing else.
 #
 targetFile="25bbdcd06c32d477f7fa1c3e4a91b032"
 
@@ -13,7 +13,10 @@ cd "$workDir" || exit
 cp "$root/target/$targetFile" "$targetFile"
 
 # Get the flag from the target
-cat "$targetFile"
+flag=$( cat "$targetFile" )
 
 # Verify it matches the content of flag.txt
 diff "$root/flag.txt" "$targetFile"
+
+# Echo out the flag
+echo $flag

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Create the ctf and store in directory target/. Echo out the filename of the
-# ctf.
+# ctf. Do not output anything else.
 #
 
 # Argument 1 can contain the target path, used by bats
