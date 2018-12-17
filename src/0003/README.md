@@ -1,22 +1,15 @@
-About dbwebb CTF structure
+---
+author: lew
+tag:
+    - intro
+    - basic
+    - linux
+---
+Basic commands
 ============================
 
-This is the basic structure for a dbwebb ctf.
+Somewhere in the folder structure, there is a flag. Can you find it?
 
-Use the Makefile to work with the ctf.
+Start by downloading the file [7cd86ecb09aa48c6e620b340f6a74592.zip](../target/7cd86ecb09aa48c6e620b340f6a74592.zip) and then try to get the flag.
 
-You may install a test environment for only this ctf using `make install`.
-
-Create a script `script/create.bash` which creates the ctf and puts it into the directory `target`. A dbwebb ctf should be one file that could be downloaded by the user. The script is executed by the target `make build`.
-
-Create a file `flag.txt` which contain the flag.
-
-A flag looks like this.
-
-> `dbwebb-CTF{some message related to the ctf}`
-
-Create a script `script/solve.bash` that solves the dbwebb ctf by using the file in `target/`. The script is executed by the target `make solve`.
-
-Make the cft pass tests in `make test`.
-
-Write instructions i the directory `doc/`. The file `doc/instruction.md` should contain details on the ctf and how to get started with solving it. The directory `doc/hint/` should contain files `1.md`, `2.md` and so on, one for each hint. The file `doc/meta.md` contains details and classifications of the ctf.
+Check out the hints if you feel a need for them.
