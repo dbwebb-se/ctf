@@ -5,7 +5,7 @@ This is an introduction to the dbwebb CTF by providing a rather simple CTF to st
 
 Can you find the flag?
 
-Start by downloading the file [02249d2846749f65d09a0c74e21c2125](../target/02249d2846749f65d09a0c74e21c2125?raw=true) and then try to get the flag.
+Start by downloading the file [25bbdcd06c32d477f7fa1c3e4a91b032](../target/25bbdcd06c32d477f7fa1c3e4a91b032?raw=true) and then try to get the flag.
 
 A flag looks like this.
 
