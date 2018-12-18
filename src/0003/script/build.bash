@@ -20,12 +20,19 @@ install -d "$target/movies/Drama/Bohemian Rhapsody"
 install -d "$target/movies/Disney/Cinderella"
 install -d "$target/movies/Disney/Robin Hood"
 install -d "$target/movies/Disney/Pinoccio"
+install -d "$target/movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
+
+touch "$target/movies/Action/Die Hard/i-am-a-file"
+touch "$target/movies/Action/Kung Fury/i-am-not-the-file.txt"
+touch "$target/movies/Drama/Bohemian Rhapsody/i-am-not-a-virus.txt"
+touch "$target/movies/Drama/Bohemian Rhapsody/i-am-not-a-virus.txt"
 
 finaltarget="$target/movies/Action/Die Hard/Die Hard 3"
 
 cp flag.txt "$finaltarget/"
 
 zip -r "$target/$filename" "$target/movies/";
+mv "$target/$filename.zip" "$target/$filename"
 rm -r "$target/movies";
 
 echo $filename
