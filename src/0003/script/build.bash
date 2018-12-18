@@ -11,36 +11,36 @@ target=${1:-target}
 filename="$( echo -n $( basename "$PWD" ) | md5sum | cut -d' ' -f 1 )"
 
 # Create the target
+cd src || exit
+install -d "movies/"
+install -d "movies/Action"
+install -d "movies/Action/Die Hard"
+install -d "movies/Action/Die Hard/Die Hard 1"
+install -d "movies/Action/Die Hard/Die Hard 2"
+install -d "movies/Action/Die Hard/Die Hard 3"
+install -d "movies/Action/Die Hard/Die Hard 4"
+install -d "movies/Action/Kung Fury"
+install -d "movies/Drama/A Star is born"
+install -d "movies/Drama/Bohemian Rhapsody"
+install -d "movies/Disney/Cinderella"
+install -d "movies/Disney/Robin Hood"
+install -d "movies/Disney/Pinoccio"
+install -d "movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
 
-install -d "$target/movies/"
-install -d "$target/movies/Action"
-install -d "$target/movies/Action/Die Hard"
-install -d "$target/movies/Action/Die Hard/Die Hard 1"
-install -d "$target/movies/Action/Die Hard/Die Hard 2"
-install -d "$target/movies/Action/Die Hard/Die Hard 3"
-install -d "$target/movies/Action/Die Hard/Die Hard 4"
-install -d "$target/movies/Action/Kung Fury"
-install -d "$target/movies/Drama/A Star is born"
-install -d "$target/movies/Drama/Bohemian Rhapsody"
-install -d "$target/movies/Disney/Cinderella"
-install -d "$target/movies/Disney/Robin Hood"
-install -d "$target/movies/Disney/Pinoccio"
-install -d "$target/movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
+touch "movies/Action/Die Hard/i-am-a-file"
+touch "movies/Action/Kung Fury/i-am-not-the-file.txt"
+touch "movies/Drama/Bohemian Rhapsody/another-one-bites-the-dust"
+touch "movies/Disney/Cinderella/hihi-wrong-file.txt"
+touch "movies/Disney/Pinoccio/its-a-lie"
+touch "movies/Disney/Robin Hood/hahaha-treasures-wonderful-treasures"
 
-touch "$target/movies/Action/Die Hard/i-am-a-file"
-touch "$target/movies/Action/Kung Fury/i-am-not-the-file.txt"
-touch "$target/movies/Drama/Bohemian Rhapsody/another-one-bites-the-dust"
-touch "$target/movies/Disney/Cinderella/hihi-wrong-file.txt"
-touch "$target/movies/Disney/Pinoccio/its-a-lie"
-touch "$target/movies/Disney/Robin Hood/hahaha-treasures-wonderful-treasures"
+finaltarget="movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
+cp "../flag.txt" "$finaltarget/"
+zip -r -q -T "../$target/$filename" "movies";
+cd ..
 
-finaltarget="$target/movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
-
-cp flag.txt "$finaltarget/"
-
-zip -r -q -T "$target/$filename" "$target/movies/";
 mv "$target/$filename.zip" "$target/$filename"
-rm -r "$target/movies";
+# rm -r "$target/movies";
 
 # Echo out the target filename
 echo $filename
