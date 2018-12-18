@@ -40,7 +40,7 @@ zip -r -q -T "../$target/$filename" "movies";
 cd ..
 
 mv "$target/$filename.zip" "$target/$filename"
-# rm -r "$target/movies";
+rm -r "src/movies";
 
 # Echo out the target filename
 echo $filename
