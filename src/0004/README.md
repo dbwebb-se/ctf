@@ -5,7 +5,7 @@ tag:
     - basic
     - linux
 ---
-Simple cryptography and OCR
+Cryptography and OCR
 ============================
 
 You have been given an image of some text...It looks like random characters, but there is something there...
