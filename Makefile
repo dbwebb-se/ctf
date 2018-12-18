@@ -10,7 +10,7 @@ SHELLCHECK ?= $(BIN)/shellcheck-latest/shellcheck
 SOURCES := $(shell find src/ -mindepth 1 -maxdepth 1 -type d)
 TARGETS := build clean clean-all solve test
 
-.PHONY: build-database check clean-top install test $(SOURCES)
+.PHONY: build-database check clean-top install test test-docker $(SOURCES)
 
 all: build test
 	@echo ">>> Building and testing all the ctfs"
@@ -53,3 +53,7 @@ install:
 test:
 	@echo ">>> Testing"
 	composer validate
+
+test-docker:
+	@echo ">>> Testing using docker"
+	docker-compose run ctf-cli "bash make test"
