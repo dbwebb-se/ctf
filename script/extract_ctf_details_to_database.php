@@ -47,6 +47,12 @@ foreach (glob(__DIR__ . "/../src/*", GLOB_ONLYDIR) as $dir) {
     $text = $parsed->text ?? "no text"; 
     //var_dump($parsed);
 
+    // Get the hints
+    // Get the url to the target, perhaps modify $text
+    // Get the flag
+    // Add rating/difficulty/time to solve with and without hints
+    // Time created/updated
+
     // Echo a summary
     echo "$id $author '$title' [" . implode($tag, ",") . "]\n";
 

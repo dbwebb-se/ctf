@@ -3,6 +3,14 @@ Revision history
 
 
 
+v1.0.* (2018-12-18)
+-------------------
+
+* Add test-docker target.
+* Fix spelling error in Makefile for 0001, 0002.
+
+
+
 v1.0.7 (2018-12-17)
 -------------------
 
