@@ -23,7 +23,7 @@ before_script:
     - make install check
 
 script:
-    - make docker COMMAND="make build solve"
+    #- make docker COMMAND="make build solve"
     - make docker COMMAND="make test"
 
 notifications:
