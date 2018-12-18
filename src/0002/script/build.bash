@@ -11,7 +11,7 @@ target=${1:-target}
 filename="$( echo -n $( basename "$PWD" ) | md5sum | cut -d' ' -f 1 )"
 
 # Create the target
-zip -o -q -T "$target/$filename" flag.txt;
+zip -o -q -T "$target/$filename" flag.txt
 mv -f "$target/$filename.zip" "$target/$filename"
 
 # Echo out the target filename

@@ -15,7 +15,7 @@ all: build test
 
 build:
 	@echo ">>> Building the target for the ctf"
-	[ ! -f script/vuild.bash ] || bash script/vuild.bash
+	[ ! -f script/build.bash ] || bash script/build.bash
 	ls -l target
 
 check:
