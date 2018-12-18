@@ -10,8 +10,11 @@ target=${1:-target}
 # Create the filename
 filename="$( echo -n $( basename "$PWD" ) | md5sum | cut -d' ' -f 1 )"
 
+# Create temporary folder
+install -d build/build
+
 # Create the target
-cd src || exit
+cd build/build || exit
 install -d "movies/"
 install -d "movies/Action"
 install -d "movies/Action/Die Hard"
@@ -35,12 +38,13 @@ touch "movies/Disney/Pinoccio/its-a-lie"
 touch "movies/Disney/Robin Hood/hahaha-treasures-wonderful-treasures"
 
 finaltarget="movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
-cp "../flag.txt" "$finaltarget/"
-zip -r -q -T "../$target/$filename" "movies";
-cd ..
+
+cp "../../flag.txt" "$finaltarget/"
+zip -r -q -T "../../$target/$filename" "movies";
+cd ../.. || exit
 
 mv "$target/$filename.zip" "$target/$filename"
-rm -r "src/movies";
+rm -rf "build/build";
 
 # Echo out the target filename
 echo $filename
