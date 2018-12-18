@@ -2,8 +2,8 @@
 #
 # Solve the dbwebb ctf and echo out the flag.
 #
-targetFile="7cd86ecb09aa48c6e620b340f6a74592.zip"
-endpoint="target/movies/Action/Die Hard/Die Hard 3/flag.txt"
+targetFile="7cd86ecb09aa48c6e620b340f6a74592"
+endpoint="target/movies/Action/Die Hard/Die Hard 3/its-getting-warmer/flag.txt"
 
 # Create the working directory and download the target file
 root="$( pwd )"
@@ -17,7 +17,8 @@ cp "$root/target/$targetFile" "$targetFile"
 mv "$targetFile" file.zip
 unzip -oq file.zip
 
-cat "$endpoint"
-
 # Verify the flag matches the content of flag.txt
 diff "$root/flag.txt" "$endpoint"
+
+# Echo out the flag
+cat "$endpoint"

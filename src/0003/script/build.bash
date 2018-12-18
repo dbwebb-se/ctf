@@ -3,9 +3,14 @@
 # Create the ctf and store in directory target/. Echo out the filename of the
 # ctf.
 #
+
+# Argument 1 can contain the target path, used by bats
 target=${1:-target}
 
+# Create the filename
 filename="$( echo -n $( basename "$PWD" ) | md5sum | cut -d' ' -f 1 )"
+
+# Create the target
 
 install -d "$target/movies/"
 install -d "$target/movies/Action"
@@ -24,15 +29,18 @@ install -d "$target/movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
 
 touch "$target/movies/Action/Die Hard/i-am-a-file"
 touch "$target/movies/Action/Kung Fury/i-am-not-the-file.txt"
-touch "$target/movies/Drama/Bohemian Rhapsody/i-am-not-a-virus.txt"
-touch "$target/movies/Drama/Bohemian Rhapsody/i-am-not-a-virus.txt"
+touch "$target/movies/Drama/Bohemian Rhapsody/another-one-bites-the-dust"
+touch "$target/movies/Disney/Cinderella/hihi-wrong-file.txt"
+touch "$target/movies/Disney/Pinoccio/its-a-lie"
+touch "$target/movies/Disney/Robin Hood/hahaha-treasures-wonderful-treasures"
 
-finaltarget="$target/movies/Action/Die Hard/Die Hard 3"
+finaltarget="$target/movies/Action/Die Hard/Die Hard 3/its-getting-warmer"
 
 cp flag.txt "$finaltarget/"
 
-zip -r "$target/$filename" "$target/movies/";
+zip -r -q -T "$target/$filename" "$target/movies/";
 mv "$target/$filename.zip" "$target/$filename"
 rm -r "$target/movies";
 
+# Echo out the target filename
 echo $filename
