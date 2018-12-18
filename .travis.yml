@@ -2,6 +2,7 @@ language: php
 
 php:
    - "7.2"
+   - "7.3"
    - hhvm
    - nightly
 
@@ -9,6 +10,9 @@ matrix:
     allow_failures:
         - php: nightly
         - php: hhvm
+
+services:
+  - docker
 
 sudo: false
 
@@ -19,8 +23,8 @@ before_script:
     - make install check
 
 script:
-    - make build solve
-    - make test
+    - make docker COMMAND="make build solve"
+    - make docker COMMAND="make test"
 
 notifications:
     irc: "irc.freenode.org#dbwebb"

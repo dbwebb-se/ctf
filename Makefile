@@ -7,6 +7,10 @@ BIN ?= bin
 BATS ?= $(BIN)/bats
 SHELLCHECK ?= $(BIN)/shellcheck-latest/shellcheck
 
+# Docker
+CONTAINER ?= ctf-cli
+COMMAND ?= bash
+
 SOURCES := $(shell find src/ -mindepth 1 -maxdepth 1 -type d)
 TARGETS := build clean clean-all solve test
 
@@ -54,6 +58,6 @@ test:
 	@echo ">>> Testing"
 	composer validate
 
-test-docker:
-	@echo ">>> Testing using docker"
-	docker-compose run ctf-cli "bash make test"
+docker:
+	@echo ">>> Run command using docker image"
+	docker-compose run $(CONTAINER) $(COMMAND)
