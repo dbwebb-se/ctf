@@ -2,6 +2,17 @@
 #
 # Makefile for all sources of dbwebb ctf.
 #
+
+# Make adjustments based on OS
+ifneq (, $(findstring CYGWIN, $(OS)))
+	OS_CYGWIN = "true"
+	ECHO = /bin/echo -e
+else ifneq (, $(findstring Linux, $(OS)))
+	OS_LINUX = "true"
+else ifneq (, $(findstring Darwin, $(OS)))
+	OS_MAC = "true"
+endif
+
 BIN ?= bin
 
 BATS ?= $(BIN)/bats
@@ -42,6 +53,7 @@ check:
 install:
 	@echo ">>> Install development environment"
 	install -d bin
+	composer install
 
 	# Bats
 	curl -Lso $(BIN)/bats-exec-suite https://raw.githubusercontent.com/sstephenson/bats/master/libexec/bats-exec-suite
@@ -52,7 +64,15 @@ install:
 	chmod 755 $(BIN)/bats*
 
 	# Shellcheck
-	curl -s https://storage.googleapis.com/shellcheck/shellcheck-latest.linux.x86_64.tar.xz | tar -xJ -C $(BIN)
+ifdef OS_LINUX
+	curl -Ls https://github.com/koalaman/shellcheck/releases/download/latest/shellcheck-latest.linux.x86_64.tar.xz | tar -xJ -C build/ && rm -f $(BIN)
+	shellcheck && ln build/shellcheck-latest/shellcheck $(BIN)
+else ifdef OS_MAC
+	curl -Ls https://github.com/koalaman/shellcheck/releases/download/latest/shellcheck-latest.darwin.x86_64.tar.xz | tar -xJ -C build/ && rm -f $(BIN)
+	shellcheck && ln build/shellcheck-latest/shellcheck $(BIN)
+endif
+
+
 
 test:
 	@echo ">>> Testing"

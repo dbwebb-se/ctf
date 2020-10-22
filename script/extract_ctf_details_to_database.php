@@ -54,7 +54,7 @@ foreach (glob(__DIR__ . "/../src/*", GLOB_ONLYDIR) as $dir) {
     // Time created/updated
 
     // Echo a summary
-    echo "$id $author '$title' [" . implode($tag, ",") . "]\n";
+    echo "$id $author '$title' [" . implode(",", $tag) . "]\n";
 
     // Execute the queries
     $sqlInsert->execute([$id, $title, $text, $author]);
