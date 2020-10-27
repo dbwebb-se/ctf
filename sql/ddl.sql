@@ -19,7 +19,12 @@ CREATE TABLE ctf
     'id' INTEGER PRIMARY KEY NOT NULL,
     'title' TEXT UNIQUE NOT NULL,
     'text' TEXT NOT NULL,
-    'author' TEXT NOT NULL
+    'author' TEXT NOT NULL,
+    'updated' DATE NOT NULL,
+    'level' TEXT NOT NULL,
+    'target' TEXT NOT NULL,
+    'tts' INTEGER NOT NULL,
+    'flag' INTEGER NOT NULL
 );
 
 
@@ -41,6 +46,22 @@ CREATE TABLE ctf
 CREATE TABLE ctf2tag
 (
     'ctf_id' INTEGER NOT NULL,
-    'tag' INTEGER NOT NULL,
-    PRIMARY KEY (ctf_id, tag)
+    'name' INTEGER NOT NULL,
+
+    PRIMARY KEY (ctf_id, name)
+);
+
+
+
+--
+-- Table hint
+--
+CREATE TABLE hint
+(
+    'id' INTEGER NOT NULL,
+    'ctf_id' INTEGER NOT NULL,
+    'title' TEXT NOT NULL,
+    'content' TEXT NOT NULL,
+
+    PRIMARY KEY (id, ctf_id)
 );
